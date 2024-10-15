@@ -1,0 +1,49 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Coffee Shop";
+}
+<form method="post" asp-controller="CoffeeMachine" asp-action="OrderCoffee">
+    <img src="img/logo.jpg">
+    <div class="text-center">
+        <h1 class="display-4">Welcome to our coffee shop</h1>
+    </div>
+    <div class="container">
+        <h2>Coffee machine</h2>
+        <div class="form">
+            <label asp-for="Type">Select the type of coffee:</label>
+            <select asp-for="Type" id="coffeeType">
+                <option value="espresso">Espresso</option>
+                <option value="latte">Latte</option>
+                <option value="cappuccino">Cappuccino</option>
+            </select>
+        </div>
+        <div class="form">
+            <label asp-for="Cup">Select the capacity of the cup:</label>
+            <select asp-for="Cup" id="coffeeCap">
+                <option value="3ml">0.3ml</option>
+                <option value="4ml">0.4ml</option>
+                <option value="5ml">0.5ml</option>
+            </select>
+        </div>
+        <div class="form">
+            <label asp-for="Sugar">Choose the amount of sugar:</label>
+            <select asp-for="Sugar" id="coffeeSugar">
+                <option value="none">none </option>
+                <option value="one">one piece </option>
+                <option value="two">two piece </option>
+            </select>
+        </div>
+        <div class="form">
+            <label asp-for="Pay">Method of payment:</label>
+            <select asp-for="Pay" id="coffeePay">
+                <option value="cash">cash</option>
+                <option value="card">card</option>
+            </select>
+        </div>
+        <div class="form">
+            <label asp-for="Price">Price:</label>
+        </div>
+        <input id="text" type="text" placeholder="input text" />
+        <input id="ready" type="submit" value="Order" />
+    </div>
+</form>

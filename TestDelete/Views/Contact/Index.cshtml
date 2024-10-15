@@ -1,0 +1,63 @@
+﻿@* @model Contact
+@{
+    ViewData["Title"] = "Contact Page";
+}
+
+<style>
+    main label {
+        margin-top: 10px;
+        display: block;
+        font-size: 18px;
+        position: relative;
+        left: 512px;
+    }
+    main input{
+        border-radius: 30px;
+        width: 25%;
+        position: relative;
+        left: 510px;
+    }
+    .button{
+        background-color: #8B4513;
+        width: 80px;
+        height: 40px;
+        color: white;
+        margin-top: 10px;
+        display: block;
+        border-radius: 30px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    h1{
+        position: relative;
+        left: 535px;
+    }
+
+</style>
+
+<h1>Contact Page</h1>
+
+<form method="post" asp-controller="Contact" asp-action="Send"> 
+    <label asp-for="Name">Name</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+
+    <label asp-for="Surname">Surname</label>
+    <input asp-for="Surname" />
+    <span asp-validation-for="Surname"></span>
+
+    <label asp-for="Age">Age</label>
+    <input asp-for="Age" />
+    <span asp-validation-for="Age"></span>
+
+    <label asp-for="Email">Email</label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+
+    <label asp-for="Message">Message</label>
+    <input asp-for="Message" />
+    <span asp-validation-for="Message"></span>
+
+    <input class="button" type="submit" value="Send" />
+</form>  *@

@@ -1,0 +1,27 @@
+﻿@* @model IEnumerable<TestDelete.Models.Client>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model)
+        {
+            <tr>
+                <td>@client.id</td>
+                <td>@client.name</td>
+                <td>@client.surname</td>
+                <td>@client.age</td>
+                <td>@client.email</td>
+                <td>@client.message</td>
+            </tr>
+        }
+    </tbody>
+</table> *@
